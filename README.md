@@ -3,7 +3,7 @@ JPG-Mobile-Detect
 
 Detect mobile devices using user agent <br />
 
-This object uses JavaScript 1.8.5 and ECMASCRIPT 5 specification <br /><br />
+Note: This object uses JavaScript 1.8.5 Object.keys feature so it is only supported for browsers with support.<br /><br />
 
 Using: <br />
 
