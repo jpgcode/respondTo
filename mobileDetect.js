@@ -5,16 +5,8 @@ Email: jpgcodecr@gmail.com
 --*/
 
 var JPGMobileDetect = {
-	devicesToDetect: {
-		0:'Android',
-		1:'iPhone',
-		2:'iPod',
-		3:'symbian',
-		4:'Windows CE',
-		5:'Windows Phone'
-	},
-	getDevice: function(){
-		var devicesToDetect = this.devicesToDetect,
+	getDevice: function(devicesToDetect){
+		var devicesToDetect = devicesToDetect,
 			agent           = navigator.userAgent.toLowerCase(),
 			devObjectLength = Object.keys(devicesToDetect).length,
 			futureRegex 	= "";
