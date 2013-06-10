@@ -7,6 +7,6 @@ Note: This object uses JavaScript 1.8.5 Object.keys feature so it is only suppor
 
 Using: <br />
 
-1. Call the object using this function: JPGMobileDetect.getDevice();
-2. Define the devices to detect inside the object as a parameter <br />
+1. Call the plugin using this function: JPGMobileDetect.getDevice();
+2. Define the devices to detect inside an object as a parameter of the getDevice function <br />
 Example: JPGMobileDetect.getDevice({0:'Android',1:'iPhone', 2:'iPod', 3:'symbian', 4:'Windows CE', 5:'Windows Phone'});
