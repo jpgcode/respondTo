@@ -4,9 +4,12 @@ Author: Jose Pablo Granados
 --*/
 
 var breakpoint = 768;
-var windowWidth = $(window).width();
-
 
 var isMobile = function(){
-	return (windowWidth > breakpoint)? false : true;
+	if(window.matchMedia !=== undefined){
+		return window.matchMedia("(max-width: "+ breakpoint +"px)").matches
+	}else{
+		var windowWidth = $(window).width();
+		return (windowWidth > breakpoint)? false : true;
+	}
 }
