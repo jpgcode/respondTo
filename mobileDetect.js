@@ -1,5 +1,5 @@
 /*--
-Mobile detection snippet based in window width
+Mobile detection snippet
 Author: Jose Pablo Granados
 --*/
 
