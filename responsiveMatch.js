@@ -23,7 +23,6 @@ var responsiveMatch = function(options){
 
 
 	if(window.matchMedia !== undefined){
-		console.log(query);
 		return window.matchMedia(query).matches
 	}
 
