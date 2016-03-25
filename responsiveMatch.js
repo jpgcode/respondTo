@@ -6,20 +6,29 @@ var responsiveMatch = function(options){
 		
 		breakpoint = breakpoints[options];
 
-		if(options === 'mobile'){
-			query = '(max-width: '+ breakpoint +'px)';
-		}else if(options === 'tablet'){
-			query = '(min-width: '+ breakpoints['mobile'] +'px) and (max-width: '+ breakpoints[options] +'px)';
-		}else if(options === 'desktop'){
-			query = '(min-width: '+ breakpoints['tablet'] +'px)';
-		}else{
-			wrongParam = true;
+		switch(options){
+			case 'mobile':
+				query = '(max-width: '+ breakpoint +'px)';
+			break;
+			case 'tablet':
+				query = '(min-width: '+ breakpoints['mobile'] +'px) and (max-width: '+ breakpoints[options] +'px)';
+			break;
+			case 'desktop':
+				query = '(min-width: '+ breakpoints['tablet'] +'px)';
+			break;
+			default:
+				wrongParam = true;
+			break;
 		}
 
 	}else if(typeof(options) === 'number'){
-		breakpoint = options;
+		if(options % 1 === 0){
+			query = '(min-width: '+ options +'px)';
+		}else{
+			wrongParam = true;
+		}
 	}else{
-		wrongParam = true;		
+		wrongParam = true;
 	}
 
 
