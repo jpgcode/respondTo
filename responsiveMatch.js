@@ -24,7 +24,7 @@ var responsiveMatch = function(options){
 
 
 	if(window.matchMedia !== undefined){
-		if(wrongParam !== true){
+		if(!wrongParam){
 			return window.matchMedia(query).matches;
 		}else{
 			return 'You are passing an invalid parameter, please check responsiveMatch docs';
