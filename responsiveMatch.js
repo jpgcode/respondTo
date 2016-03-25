@@ -1,6 +1,10 @@
 var responsiveMatch = function(options){
 
-	var breakpoints = { mobile: 767, tablet: 1023, desktop: 1279 }, breakpoint, query, wrongParam = false;
+	var breakpoints = { mobile: 767, tablet: 1023, desktop: 1279 }, 
+		breakpoint, 
+		query, 
+		wrongParam = false,
+		errorMsg = 'You are passing an invalid parameter, please check responsiveMatch docs';
 
 	if(typeof(options) === 'string'){
 		
@@ -21,26 +25,17 @@ var responsiveMatch = function(options){
 			break;
 		}
 
-	}else if(typeof(options) === 'number'){
-		if(options % 1 === 0){
-			query = '(min-width: '+ options +'px)';
-		}else{
-			wrongParam = true;
-		}
+	}else if(typeof(options) === 'number' && options % 1 === 0){
+		query = '(min-width: '+ options +'px)';
 	}else{
 		wrongParam = true;
 	}
 
 
-	if(window.matchMedia !== undefined){
-		if(!wrongParam){
-			return window.matchMedia(query).matches;
-		}else{
-			console.warn('You are passing an invalid parameter, please check responsiveMatch docs')
-			return false;
-		}
+	if(window.matchMedia !== undefined && !wrongParam){
+		return window.matchMedia(query).matches;
 	}else{
-		console.warn('You are passing an invalid parameter, please check responsiveMatch docs')
+		console.warn(errorMsg);
 		return false;
 	}
 
