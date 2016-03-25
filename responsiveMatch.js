@@ -27,10 +27,12 @@ var responsiveMatch = function(options){
 		if(!wrongParam){
 			return window.matchMedia(query).matches;
 		}else{
-			return 'You are passing an invalid parameter, please check responsiveMatch docs';
+			console.warn('You are passing an invalid parameter, please check responsiveMatch docs')
+			return false;
 		}
 	}else{
-		return 'You are passing an invalid parameter, please check responsiveMatch docs';
+		console.warn('You are passing an invalid parameter, please check responsiveMatch docs')
+		return false;
 	}
 
 }
