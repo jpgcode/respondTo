@@ -1,5 +1,9 @@
 #RespondTo utility
 
+<p align="center">
+    <img height="388" width="579" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/intro.jpg">
+</p>
+
 > Method to detect breakpoints with Javascript. 
 
 It returns "true" if the conditions defined are met. This utiliy uses mobile-fist methodology.
