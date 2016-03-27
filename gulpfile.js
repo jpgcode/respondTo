@@ -1,16 +1,11 @@
-const gulp   = require('gulp');
-const watch  = require('gulp-watch');
-const $      = require('gulp-load-plugins')();
-const uglify = require('gulp-uglify');
-const rename = require("gulp-rename");
-const bs     = require('browser-sync').create();
+const gulp           = require('gulp');
+const watch          = require('gulp-watch');
+const uglify         = require('gulp-uglify');
+const rename         = require('gulp-rename');
+const argv           = require('yargs').argv;
+const mochaPhantomJS = require('gulp-mocha-phantomjs');
+const bs             = require('browser-sync').create();
 
-
-
-gulp.task('notify:server', () => {
-  return gulp.src('gulpfile.js')
-      .pipe($.notify('Server ready!'));
-});
 
 
 gulp.task('reloadBrowsers', () => {
@@ -26,6 +21,33 @@ gulp.task('minifyJS', () => {
         .pipe(gulp.dest('dist'));
 });
 
+
+gulp.task('test', function() {
+
+    var viewportSize,
+        testFile;
+
+    if(argv.desktop || argv.tablet || argv.mobile){
+        if(argv.desktop){
+            testFile = './test/desktop.html';
+            viewportSize = { width: 1280, height: 768 };
+        }else if(argv.tablet){
+            testFile = './test/tablet.html';
+            viewportSize = { width: 768, height: 640 };
+        }else if(argv.mobile){
+            testFile = './test/mobile.html';
+            viewportSize = { width: 320, height: 640 };
+        }
+    }
+
+    return gulp.src(testFile)
+        .pipe(mochaPhantomJS({
+            phantomjs: {
+                viewportSize: viewportSize,
+                useColors:true
+            }
+        }));
+});
 
 gulp.task('default', () => {
 

@@ -4,7 +4,7 @@
   "description": "Easy JS breakpoint detection utility",
   "main": "respondTo.js",
   "scripts": {
-    "test": "mocha"
+    "test": "gulp test --desktop && gulp test --tablet && gulp test --mobile"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,11 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.2.0",
+    "gulp-mocha-phantomjs": "^0.11.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.3",
-    "gulp-watch": "^4.3.5"
+    "gulp-watch": "^4.3.5",
+    "should": "^8.3.0",
+    "yargs": "^4.3.2"
   }
 }

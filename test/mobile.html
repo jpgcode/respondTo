@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+</head>
+<body>
+
+    <div id="mocha"></div>
+
+    <script src="../node_modules/should/should.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../dist/respondTo.min.js"></script>
+
+    <script>mocha.setup('bdd')</script>
+
+    <script>
+
+        describe('desktop', function () {
+            it('should be false', function () {
+                respond.to('desktop').should.equal(false);
+            });
+        });
+
+        describe('tablet', function () {
+            it('should be false', function () {
+                respond.to('tablet').should.equal(false);
+            });
+        });
+
+        describe('mobile', function () {
+            it('should be true', function () {
+                respond.to('mobile').should.equal(true);
+            });
+        });
+
+        describe('custom smaller breakpoint', function () {
+            it('should be true', function () {
+                respond.to(150).should.equal(true);
+            });
+        });
+
+        describe('custom larger breakpoint', function () {
+            it('should be false', function () {
+                respond.to(768).should.equal(false);
+            });
+        });
+
+    </script>
+
+    <script>
+        mocha.run();
+    </script>
+
+
+</body>
+</html>
