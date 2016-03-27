@@ -13,7 +13,10 @@
     <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
     <script src="../dist/respondTo.min.js"></script>
 
-    <script>mocha.setup('bdd')</script>
+    <script>
+        window.initMochaPhantomJS();
+        mocha.setup('bdd');
+    </script>
 
     <script>
 
