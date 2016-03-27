@@ -1,4 +1,4 @@
-#RespondTo utility
+#RespondTo utility [![Build Status](https://travis-ci.org/jpgcode/respondTo.svg?branch=master)](https://travis-ci.org/jpgcode/gulp-starterkit)
 
 <p align="center">
     <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/demo/intro.jpg">
