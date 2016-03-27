@@ -1,4 +1,4 @@
-#ResponsiveMatch utility
+#RespondTo utility
 
 > Method to detect breakpoints with Javascript. 
 
@@ -14,31 +14,31 @@ Internet Explorer 10+. It uses [window.matchmedia](https://developer.mozilla.org
 Detect mobile breakpoint (max-width: 767px):
 
 ```js
-responsiveMatch('mobile');
+respond.to('mobile');
 ```
 
 
 Detect tablet breakpoint (min-width: 767px) and (max-width: 1023px):
 
 ```js
-responsiveMatch('tablet');
+respond.to('tablet');
 ```
 
 Detect desktop breakpoint (min-width: 1023px):
 
 ```js
-responsiveMatch('desktop');
+respond.to('desktop');
 ```
 
 Custom breakpoint. Just send a number with the breakpoint you want to use. It will use it in a max-width conditional:
 
 ```js
-responsiveMatch(1280);
+respond.to(1280);
 ```
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jpgcode/responsiveMatch/issues)
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jpgcode/respondTo/issues)
 
 ## Authors
 
