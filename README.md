@@ -1,7 +1,7 @@
 #RespondTo utility
 
 <p align="center">
-    <img height="388" width="579" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/intro.jpg">
+    <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/intro.jpg">
 </p>
 
 > Method to detect breakpoints with Javascript. 
