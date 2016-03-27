@@ -38,15 +38,17 @@ gulp.task('test', function() {
             testFile = './test/mobile.html';
             viewportSize = { width: 320, height: 640 };
         }
-    }
 
-    return gulp.src(testFile)
+        return gulp.src(testFile)
         .pipe(mochaPhantomJS({
             phantomjs: {
                 viewportSize: viewportSize,
                 useColors:true
             }
         }));
+    }else{
+        return false;
+    }
 });
 
 gulp.task('default', () => {
