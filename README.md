@@ -34,7 +34,7 @@ Detect desktop breakpoint (min-width: 1023px):
 respond.to('desktop');
 ```
 
-Custom breakpoint. Just send a number with the breakpoint you want to use. It will use it in a max-width conditional:
+Custom breakpoint. Just send a number with the breakpoint you want to use. It will use it in a min-width conditional:
 
 ```js
 respond.to(1280);
