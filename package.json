@@ -4,7 +4,7 @@
   "description": "Easy JS breakpoint detection utility",
   "main": "respondTo.js",
   "scripts": {
-    "test": "gulp test --desktop && gulp test --tablet && gulp test --mobile"
+    "test": "gulp test --desktop && gulp test --tablet && gulp test --mobile && gulp test --others"
   },
   "repository": {
     "type": "git",
