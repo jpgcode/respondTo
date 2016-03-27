@@ -1,7 +1,7 @@
 #RespondTo utility
 
 <p align="center">
-    <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/intro.jpg">
+    <img height="271" width="405" src="https://raw.githubusercontent.com/jpgcode/respondTo/master/demo/intro.jpg">
 </p>
 
 > Method to detect breakpoints with Javascript. 
@@ -15,7 +15,7 @@ Internet Explorer 10+. It uses [window.matchmedia](https://developer.mozilla.org
 
 ##Instalation
 
-Download respondTo.js from the app folder and add it to your project.
+Download `respondTo.min.js` from the `dist` folder and add it to your project.
 
 ##Usage
 

@@ -1,3 +1,8 @@
+/*--
+ ** RespondTo Method. (c) 2016 Jose Pablo Granados
+ ** Released under the MIT license
+--*/
+
 var respond = (function(options){
 
 
