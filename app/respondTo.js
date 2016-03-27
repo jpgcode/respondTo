@@ -27,7 +27,7 @@ var respond = (function(options){
                 default:
                     wrongParam = true;
                 break;
-        }
+            }
 
         }else if(typeof(options) === 'number' && options % 1 === 0){
             query = '(min-width: '+ options +'px)';
