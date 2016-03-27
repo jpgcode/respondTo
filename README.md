@@ -13,6 +13,10 @@ It returns "true" if the conditions defined are met. This utiliy uses mobile-fis
 
 Internet Explorer 10+. It uses [window.matchmedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia).
 
+##Instalation
+
+Download respondTo.js from the app folder and add it to your project.
+
 ##Usage
 
 Detect mobile breakpoint (max-width: 767px):
