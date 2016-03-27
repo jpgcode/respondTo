@@ -27,7 +27,7 @@ gulp.task('test', function() {
     var viewportSize,
         testFile;
 
-    if(argv.desktop || argv.tablet || argv.mobile){
+    if(argv.desktop || argv.tablet || argv.mobile || argv.others){
         if(argv.desktop){
             testFile = './test/desktop.html';
             viewportSize = { width: 1280, height: 768 };
@@ -36,6 +36,9 @@ gulp.task('test', function() {
             viewportSize = { width: 768, height: 640 };
         }else if(argv.mobile){
             testFile = './test/mobile.html';
+            viewportSize = { width: 320, height: 640 };
+        }else if(argv.others){
+            testFile = './test/others.html';
             viewportSize = { width: 320, height: 640 };
         }
 

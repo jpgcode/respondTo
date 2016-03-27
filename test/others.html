@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mocha Tests</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="mocha"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/should.js/8.3.0/should.js"></script>
+    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+    <script src="../dist/respondTo.min.js"></script>
+
+    <script>
+        window.initMochaPhantomJS && window.initMochaPhantomJS();
+        mocha.setup('bdd');
+    </script>
+
+    <script>
+
+        describe('array', function () {
+            it('should be false', function () {
+                respond.to(['1']).should.equal(false);
+            });
+        });
+
+        describe('object', function () {
+            it('should be false', function () {
+                respond.to({width: 100}).should.equal(false);
+            });
+        });
+
+        describe('floating point number', function () {
+            it('should be false', function () {
+                respond.to(1280.1).should.equal(false);
+            });
+        });
+
+    </script>
+
+    <script>
+        mocha.run();
+    </script>
+
+
+</body>
+</html>

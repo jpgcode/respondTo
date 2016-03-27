@@ -9,7 +9,7 @@ var respond = (function(options){
         breakpoint,
         query,
         wrongParam = false,
-        errorMsg = 'You are passing an invalid parameter, please check responsiveMatch docs';
+        errorMsg = 'Invalid parameter, check respondTo docs';
 
 
     function to(options){
