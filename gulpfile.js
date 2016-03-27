@@ -1,4 +1,5 @@
 const gulp           = require('gulp');
+const chalk          = require('chalk');
 const watch          = require('gulp-watch');
 const uglify         = require('gulp-uglify');
 const rename         = require('gulp-rename');
@@ -28,6 +29,7 @@ gulp.task('test', function() {
         testFile;
 
     if(argv.desktop || argv.tablet || argv.mobile || argv.others){
+
         if(argv.desktop){
             testFile = './test/desktop.html';
             viewportSize = { width: 1280, height: 768 };
@@ -41,6 +43,8 @@ gulp.task('test', function() {
             testFile = './test/others.html';
             viewportSize = { width: 320, height: 640 };
         }
+
+        console.log(chalk.green('Running '+ testFile.split('/')[2] + ' tests'));
 
         return gulp.src(testFile)
         .pipe(mochaPhantomJS({
