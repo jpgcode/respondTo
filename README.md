@@ -15,6 +15,12 @@ Internet Explorer 10+. It uses [window.matchmedia](https://developer.mozilla.org
 
 ##Instalation
 
+###Bower
+```shell
+bower install respondTo
+```
+
+###Manually
 Download `respondTo.min.js` from the `dist` folder and add it to your project.
 
 ##Usage

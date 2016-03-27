@@ -1,0 +1,22 @@
+{
+  "name": "respondTo",
+  "description": "Easy JS breakpoint detection utility",
+  "main": "dist/respondTo.js",
+  "authors": [
+    "Jose Pablo Granados"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "responsive",
+    "mobile"
+  ],
+  "homepage": "https://github.com/jpgcode/respondTo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
