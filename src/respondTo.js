@@ -40,6 +40,7 @@ var respond = (function(options){
         }
 
 
+
         if(window.matchMedia !== undefined && !wrongParam){
             return window.matchMedia(query).matches;
         }else{
